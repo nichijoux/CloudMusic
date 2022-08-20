@@ -1,0 +1,29 @@
+<!-- 排行榜 -->
+<view class="randListContainer">
+  <!-- 导航区 -->
+  <scroll-view scroll-x="true" class="navScroll" enable-flex="true" scroll-into-view="{{'scroll' + navId}}" scroll-with-animation="true">
+    <view id="{{'scroll' + item.id}}" class="navItem" wx:for="{{tagGroupList}}" wx:key="index">
+      <view class="navContent {{navId === item.id ? 'active' : '' }}" bindtap="changeNav" id="{{item.id}}">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 歌曲区 -->
+  <view class="ListContainer">
+    <view class="listHeader">
+      <text>播放全部</text>
+      <text class="changeMore">多选</text>
+    </view>
+    <!-- 歌曲 -->
+    <scroll-view scroll-y="true" class="listScroll">
+      <view class="scrollItem" wx:for="{{songList}}" wx:key="id" data-index="{{index}}" data-song="{{item}}" bindtap="toSongDetail">
+        <image src="{{item.al.picUrl}}"></image>
+        <view class="musicInfo">
+          <text class="musicName">{{item.name}}</text>
+          <text class="musicAuthor">{{item.ar[0].name}}</text>
+        </view>
+        <text class="iconfont icon-icon"></text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

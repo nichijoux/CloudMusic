@@ -1,0 +1,83 @@
+/* 导航 */
+.navScroll {
+  display: flex;
+  white-space: nowrap;
+  height: 80rpx;
+}
+
+.navScroll .navItem {
+  padding: 0 20rpx;
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  box-sizing: border-box;
+}
+
+.navItem .navContent {
+  height: 60rpx;
+  box-sizing: border-box;
+}
+
+.navItem .active {
+  border-bottom: 1rpx solid #d43c33;
+}
+
+/* 列表 */
+.ListContainer {
+  position: relative;
+  top: -20rpx;
+  padding: 0 20rpx;
+  border-radius: 30rpx;
+  background: #fff;
+}
+
+.listHeader {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.listHeader .changeMore {
+  float: right;
+}
+
+/* 歌曲 */
+
+.scrollItem {
+  display: flex;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+
+.scrollItem image {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 8rpx;
+}
+
+.musicInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+.musicInfo text {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  max-width: 400rpx;
+  /*最长文本长度*/
+  white-space: nowrap;
+  /*不允许换行*/
+  overflow: hidden;
+  /*超过部分隐藏*/
+  text-overflow: ellipsis;
+  /*超过部分换为省略号*/
+}
+
+.scrollItem .iconfont {
+  position: absolute;
+  right: 10rpx;
+  width: 80rpx;
+  height: 80rpx;
+  text-align: right;
+}
